@@ -25,7 +25,7 @@ const Index = (props) => {
                     defaultSelectedKeys={['/']}
                 >
                     <Menu.Item key="/">地图可视化</Menu.Item>
-                    <Menu.Item key="/chart">图表可视化</Menu.Item>
+                    <Menu.Item key="/maps1">图表可视化</Menu.Item>
                 </Menu>
             </Header>
             {props.children ? props.children : null}
