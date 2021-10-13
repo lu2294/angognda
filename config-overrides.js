@@ -1,6 +1,5 @@
 
-const { override, fixBabelImports, addLessLoader, addWebpackAlias, addDecoratorsLegacy, addWebpackPlugin } = require('customize-cra');
-const webpack = require('webpack');
+const { override, fixBabelImports, addLessLoader, addWebpackAlias, addDecoratorsLegacy, addWebpackPlugin,addWebpackExternals  } = require('customize-cra');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const  AntdDayjsWebpackPlugin  = require('antd-dayjs-webpack-plugin');
 const path = require('path');
@@ -34,13 +33,14 @@ module.exports = override(
     addDecoratorsLegacy(),
     rewiredMap(),
     addAnalyzer(),
-    addCompression(),
+    // addCompression(),
+    
     addWebpackAlias({
-        ["@"]: path.resolve(__dirname, "src"),
-        ["utils"]: path.resolve(__dirname, "src/utils"),
-        ["images"]: path.resolve(__dirname, "src/assets/images"),
-        ["@components"]: path.resolve(__dirname, "src/pages/components"),
-        ["@services"]: path.resolve(__dirname, "src/services"),
+        "@": path.resolve(__dirname, "src"),
+        "utils": path.resolve(__dirname, "src/utils"),
+        "images": path.resolve(__dirname, "src/assets/images"),
+        "@components": path.resolve(__dirname, "src/pages/components"),
+        "@services": path.resolve(__dirname, "src/services"),
     }),
     addLessLoader({
         javascriptEnabled: true,
@@ -49,6 +49,9 @@ module.exports = override(
             '@layout-header-background': '#fff',
             "@text-color": "#53627c",
         },
+    }),
+    addWebpackExternals({
+      'BMap': "BMap" 
     }),
     addWebpackPlugin(
         new AntdDayjsWebpackPlugin()
