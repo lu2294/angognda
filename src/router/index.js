@@ -36,11 +36,11 @@ const BasicRoute = () => (
                         />
                         <Route
                             path="/maps2"
-                            component={SuspenseComponent(Maps1)}
+                            component={SuspenseComponent(Maps2)}
                         />
                         <Route
                             path="/maps3"
-                            component={SuspenseComponent(Maps1)}
+                            component={SuspenseComponent(Maps3)}
                         />
                         <Route
                             path="/maps4"
