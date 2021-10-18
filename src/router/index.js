@@ -44,7 +44,7 @@ const BasicRoute = () => (
                         />
                         <Route
                             path="/maps4"
-                            component={SuspenseComponent(Maps1)}
+                            component={SuspenseComponent(Maps4)}
                         />
                     </Switch>
                 </Route>

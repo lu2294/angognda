@@ -34,8 +34,8 @@ const Index = (props) => {
                     <Menu.Item key="/">地图可视化-迁移图</Menu.Item>
                     <Menu.Item key="/maps1">地图可视化-实时公交</Menu.Item>
                     <Menu.Item key="/maps2">地图可视化-热力图</Menu.Item>
-                    <Menu.Item key="/maps3">地图可视化-实时公交</Menu.Item>
-                    <Menu.Item key="/maps4">地图可视化-实时公交</Menu.Item>
+                    <Menu.Item key="/maps3">地图可视化-路段拥堵</Menu.Item>
+                    <Menu.Item key="/maps4">地图可视化-校园介绍</Menu.Item>
                 </Menu>
             </Header>
             {props.children ? props.children : null}

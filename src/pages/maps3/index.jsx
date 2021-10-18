@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import icon from 'images/1.svg';
+import icon from 'images/4.svg';
 import XdrPlayer from '@components/player';
 import {  Modal } from 'antd';
 import './index.less'
@@ -63,7 +63,7 @@ class ZMap extends Component {
         ).addTo(map);
         var myIcon = L.icon({
           iconUrl: icon,
-          iconSize: [38, 95],
+          iconSize: [25, 55],
           // popupAnchor: [-3, -76]
       });
         L.marker([31.673179194189036, 118.52346897125246], {icon: myIcon,className: 'green'}).addTo(map).on('click', this.onClick)
