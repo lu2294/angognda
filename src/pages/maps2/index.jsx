@@ -174,7 +174,6 @@ class ZMap extends Component {
       if(!map.hasLayer(heatLayer2)) heatLayer2 = L.heatLayer(data1,{radius:20,minOpacity: 0.5 }).addTo(map);
     }
     click2 = () =>{
-      console.log(map)
       map.hasLayer(heatLayer2) && map.removeLayer(heatLayer2)
       if(!map.hasLayer(heatLayer1))heatLayer1 = L.heatLayer(data,{radius:20,minOpacity: 0.5 }).addTo(map);
     }

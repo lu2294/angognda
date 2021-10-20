@@ -116,6 +116,7 @@ const Icon6 = L.icon({
 
         L.marker([31.677543638393473, 118.55427145957947], {icon: Icon6}).bindPopup(pop6, customOptions).addTo(map) //校医院
 
+        
         map.on('click', function(e) {
           console.log([e.latlng.lat,e.latlng.lng]);
       } );
